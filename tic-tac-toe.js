@@ -8,6 +8,12 @@ document.addEventListener("DOMContentLoaded", function() {
         addsquare[i].onclick = function() { myFunction() };
         var player1arr = [, , ];
         var player2arr = [, , ];
+        addsquare[i].addEventListener('mouseover',
+            function(e) { e.target.classList.add('hover') });
+
+        addsquare[i].addEventListener('mouseout',
+            function(e) { e.target.classList.remove('hover') });
+
 
         function myFunction() {
 
