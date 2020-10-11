@@ -6,13 +6,14 @@ document.addEventListener("DOMContentLoaded", function() {
     for (let i = 0; i < addsquare.length; i++) {
         addsquare[i].classList.add("square")
         addsquare[i].onclick = function() { myFunction() };
-        var player1arr = [, , ];
-        var player2arr = [, , ];
+        var player1arr = [];
+        var player2arr = [];
         addsquare[i].addEventListener('mouseover',
             function(e) { e.target.classList.add('hover') });
 
         addsquare[i].addEventListener('mouseout',
             function(e) { e.target.classList.remove('hover') });
+
 
 
         function myFunction() {
@@ -37,10 +38,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 addsquare[i].onclick = false;
 
             }
-
         }
+        const restartGame = document.getElementsByClassName("btn")
+        restartGame[0].addEventListener('click', function() {
+            addsquare[i].innerHTML = ""
+            alert("New Game")
+        });
+
 
     }
     console.log(player1arr)
     console.log(player2arr)
+
+
+
 });
